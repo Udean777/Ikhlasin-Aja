@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ikhlas_kan/presentation/auth/signin_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -12,11 +13,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       title: "Ikhlasin",
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: SigninPage(),
     );
   }
 }
