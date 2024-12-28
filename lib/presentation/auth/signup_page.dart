@@ -6,6 +6,7 @@ import 'package:ikhlas_kan/core/theme/app_colors.dart';
 import 'package:ikhlas_kan/core/widgets/custom_elevated_button.dart';
 import 'package:ikhlas_kan/core/widgets/custom_textfield.dart';
 import 'package:ikhlas_kan/presentation/auth/signin_page.dart';
+import 'package:ikhlas_kan/presentation/main/home_page.dart';
 
 class SignupPage extends StatefulWidget {
   const SignupPage({super.key});
@@ -70,7 +71,13 @@ class _SignupPageState extends State<SignupPage> {
                       _buildFormFields(),
                       CustomElevatedButton(
                         text: "Login",
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => HomePage(),
+                            ),
+                          );
+                        },
                       ),
                       _RegisterLink(),
                     ],
