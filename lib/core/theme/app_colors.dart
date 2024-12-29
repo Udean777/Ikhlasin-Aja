@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
-  static const int color1 = 0xFF89A8B2;
+  static const int color1 = 0xFF1A8FE3;
   static const int color2 = 0xFFB3C8CF;
   static const int color3 = 0xFFE5E1DA;
   static const int color4 = 0xFFF1F0E8;
 }
 
-const Color primary = Color(0xFF2E7D32);
+const Color primary = Color(AppColors.color1);
 const Color onPrimary = Color(0xFFFFFFFF);
-const Color secondary = Color(0xFF81C784);
+const Color secondary = Color(AppColors.color2);
 const Color onSecondary = Color(0xFF000000);
 const Color error = Color(0xFFB00020);
 const Color onError = Color(0xFFFFFFFF);

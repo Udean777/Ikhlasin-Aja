@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ikhlas_kan/core/assets/app_assets.dart';
 import 'package:ikhlas_kan/core/widgets/custom_appbar.dart';
+import 'package:ikhlas_kan/presentation/main/widgets/campaign_sections.dart';
 import 'package:ikhlas_kan/presentation/main/widgets/donation_card.dart';
 import 'package:ikhlas_kan/presentation/main/widgets/donation_form.dart';
+import 'package:ikhlas_kan/presentation/main/widgets/impact_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -75,6 +77,9 @@ class HomePage extends StatelessWidget {
               child: DonationForm(),
             ),
           ),
+          const SliverToBoxAdapter(
+            child: CampaignSections(),
+          ),
           SliverPadding(
             padding: const EdgeInsets.only(
               bottom: 32,
@@ -92,8 +97,14 @@ class HomePage extends StatelessWidget {
                     daysLeft: data['daysLeft'],
                   );
                 },
-                childCount: 5,
+                childCount: donationData.length,
               ),
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.only(bottom: 32),
+              child: ImpactSection(),
             ),
           ),
         ],
