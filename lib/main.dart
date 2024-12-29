@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ikhlas_kan/core/theme/app_colors.dart';
-import 'package:ikhlas_kan/presentation/auth/signin_page.dart';
+import 'package:ikhlas_kan/presentation/main/main_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -27,7 +27,7 @@ class MainApp extends StatelessWidget {
           onSurface: onSurface,
         ),
       ),
-      home: SigninPage(),
+      home: MainPage(),
     );
   }
 }

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ikhlas_kan/core/assets/app_assets.dart';
 import 'package:ikhlas_kan/core/widgets/category_button.dart';
 import 'package:ikhlas_kan/core/widgets/custom_appbar.dart';
-import 'package:ikhlas_kan/presentation/main/widgets/donation_card.dart';
+import 'package:ikhlas_kan/presentation/main/home/pages/detail_donations_page.dart';
+import 'package:ikhlas_kan/presentation/main/home/widgets/donation_card.dart';
 
 class CampaignsViewAll extends StatelessWidget {
   const CampaignsViewAll({super.key});
@@ -128,6 +129,20 @@ class CampaignsViewAll extends StatelessWidget {
                     targetAmount: data['targetAmount'],
                     donorCount: data['donorCount'],
                     daysLeft: data['daysLeft'],
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => DetailDonationsPage(
+                            imgUrl: data['imgUrl'],
+                            title: data['title'],
+                            raisedAmount: data['raisedAmount'],
+                            targetAmount: data['targetAmount'],
+                            donorCount: data['donorCount'],
+                            daysLeft: data['daysLeft'],
+                          ),
+                        ),
+                      );
+                    },
                   );
                 },
                 childCount: donationData.length,
