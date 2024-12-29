@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ikhlas_kan/core/assets/app_assets.dart';
+import 'package:ikhlas_kan/presentation/view_all/impact_view_all.dart';
 
 class ImpactSection extends StatelessWidget {
   const ImpactSection({super.key});
@@ -38,7 +39,13 @@ class ImpactSection extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ImpactViewAll(),
+                    ),
+                  );
+                },
                 child: Text(
                   "See all",
                   style: GoogleFonts.poppins(
