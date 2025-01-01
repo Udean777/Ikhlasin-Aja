@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ikhlas_kan/core/theme/app_colors.dart';
+import 'package:ikhlas_kan/presentation/donations/pages/add_donations.dart';
 
 class DetailDonationsPage extends StatelessWidget {
   const DetailDonationsPage({
@@ -47,7 +48,7 @@ class DetailDonationsPage extends StatelessWidget {
           ),
         ],
       ),
-      bottomNavigationBar: _buildDonateButton(),
+      bottomNavigationBar: _buildDonateButton(context),
     );
   }
 
@@ -402,7 +403,7 @@ class DetailDonationsPage extends StatelessWidget {
     );
   }
 
-  Widget _buildDonateButton() {
+  Widget _buildDonateButton(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -417,7 +418,13 @@ class DetailDonationsPage extends StatelessWidget {
         ],
       ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => AddDonations(),
+            ),
+          );
+        },
         style: ElevatedButton.styleFrom(
           backgroundColor: Color(AppColors.color1),
           padding: const EdgeInsets.symmetric(vertical: 16),

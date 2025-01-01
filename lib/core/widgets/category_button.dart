@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CategoryButton extends StatelessWidget {
   const CategoryButton({
+    super.key,
     required this.label,
     required this.isSelected,
     required this.onTap,

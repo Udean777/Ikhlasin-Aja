@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ikhlas_kan/core/theme/app_colors.dart';
+import 'package:ikhlas_kan/presentation/donations/pages/add_donations.dart';
 
 class DonationForm extends StatefulWidget {
   const DonationForm({super.key});
@@ -230,7 +231,13 @@ class _DonationFormState extends State<DonationForm> {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AddDonations(),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(AppColors.color1),
                 padding: const EdgeInsets.symmetric(vertical: 16),
